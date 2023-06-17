@@ -21,7 +21,7 @@ In particular, the convolution operation is the most time-consuming operation in
 
 The initial implementation of the convolution operation was quite straightforward. However, it had issues with memory fragmentation which could lead to inefficient memory usage and slow down the execution. 
 
-`
+```c
 double*** convolution1d(double**** filter, double*** input, double* bias, int stride, int padding, int input_dim, int input_depth, int filter_dim, int num_filters) {
     int output_dim = (input_dim - filter_dim + 2 * padding) / stride + 1; // Calculate output dimensions
 
@@ -50,13 +50,14 @@ double*** convolution1d(double**** filter, double*** input, double* bias, int st
 
     return output;
 }
-`
+```
 
 ### Avoiding Memory Fragmentation
 
 To avoid memory fragmentation, I allocated the output array in a continuous block of memory. This modification resulted in a significant increase in speed.
 
-`double*** convolution1d(double**** filter, double*** input, double* bias, int stride, int padding, int input_dim, int input_depth, int filter_dim, int num_filters) {
+```c
+double*** convolution1d(double**** filter, double*** input, double* bias, int stride, int padding, int input_dim, int input_depth, int filter_dim, int num_filters) {
     int output_dim = (input_dim - filter_dim + 2 * padding) / stride + 1; // Calculate output dimensions
 
     // Allocate output array in a continuous block of memory
@@ -85,13 +86,15 @@ To avoid memory fragmentation, I allocated the output array in a continuous bloc
     }
 
     return output;
-}`
+}
+```
 
 ### Loop Unrolling
 
 To further speed up the convolution operation, I applied the technique of loop unrolling. Loop unrolling is a simple optimization technique where the number of iterations in a loop is increased to reduce the overhead of loop control. 
 
-`double*** convolution1d(double**** filter, double*** input, double* bias, int stride, int padding, int input_dim, int input_depth, int filter_dim, int num_filters) {
+```c
+double*** convolution1d(double**** filter, double*** input, double* bias, int stride, int padding, int input_dim, int input_depth, int filter_dim, int num_filters) {
     int output_dim = (input_dim - filter_dim + 2 * padding) / stride + 1; // Calculate output dimensions
 
     // Allocate output array in a continuous block of memory
@@ -129,13 +132,15 @@ To further speed up the convolution operation, I applied the technique of loop u
     free(output_data);
 
     return output;
-}`
+}
+```
 
 ### Reducing Unnecessary Memory Allocation
 
 In the final version of the code, I further reduced unnecessary memory allocation by removing the innermost dimension from the output array. This change decreased the number of memory allocations, reducing the time spent in memory management and improving performance. 
 
-`double** convolution1d(double**** filter, double*** input, double* bias, int stride, int padding, int input_dim, int input_depth, int filter_dim, int num_filters) {
+```c
+double** convolution1d(double**** filter, double*** input, double* bias, int stride, int padding, int input_dim, int input_depth, int filter_dim, int num_filters) {
     int output_dim = (input_dim - filter_dim + 2 * padding) / stride + 1; // Calculate output dimensions
 
     // Allocate output array in a continuous block of memory
@@ -169,7 +174,8 @@ In the final version of the code, I further reduced unnecessary memory allocatio
     free(output_data);
 
     return output;
-}`
+}
+```
 
 The actual implementation slightly differs from the above code. For the exact implementation, please refer to the `vgg19_1d.c` file.
 
