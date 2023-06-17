@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "cblas.h": "c",
+        "coreml_provider_factory.h": "c"
+    }
+}

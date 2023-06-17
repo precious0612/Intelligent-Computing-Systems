@@ -1,0 +1,25 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/precious/Intelligent-Computing-Systems.git/VGG/output/vgg19_1d'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _pad, symObjAddr: 0x0, symBinAddr: 0x100001D98, symSize: 0x208 }
+  - { offsetInCU: 0x52, offset: 0x52, size: 0x8, addend: 0x0, symName: _pad, symObjAddr: 0x0, symBinAddr: 0x100001D98, symSize: 0x208 }
+  - { offsetInCU: 0x114, offset: 0x114, size: 0x8, addend: 0x0, symName: _convolution, symObjAddr: 0x208, symBinAddr: 0x100001FA0, symSize: 0x298 }
+  - { offsetInCU: 0x2B6, offset: 0x2B6, size: 0x8, addend: 0x0, symName: _convolution1d, symObjAddr: 0x4A0, symBinAddr: 0x100002238, symSize: 0x218 }
+  - { offsetInCU: 0x412, offset: 0x412, size: 0x8, addend: 0x0, symName: _max_pooling, symObjAddr: 0x6B8, symBinAddr: 0x100002450, symSize: 0x2B4 }
+  - { offsetInCU: 0x56E, offset: 0x56E, size: 0x8, addend: 0x0, symName: _batch_normalize, symObjAddr: 0x96C, symBinAddr: 0x100002704, symSize: 0x1E8 }
+  - { offsetInCU: 0x648, offset: 0x648, size: 0x8, addend: 0x0, symName: _generateRandom4DData, symObjAddr: 0xB54, symBinAddr: 0x1000028EC, symSize: 0x1B0 }
+  - { offsetInCU: 0x718, offset: 0x718, size: 0x8, addend: 0x0, symName: _free4DData, symObjAddr: 0xD04, symBinAddr: 0x100002A9C, symSize: 0x118 }
+  - { offsetInCU: 0x7C8, offset: 0x7C8, size: 0x8, addend: 0x0, symName: _generateRandom3DData, symObjAddr: 0xE1C, symBinAddr: 0x100002BB4, symSize: 0x148 }
+  - { offsetInCU: 0x86E, offset: 0x86E, size: 0x8, addend: 0x0, symName: _free3DData, symObjAddr: 0xF64, symBinAddr: 0x100002CFC, symSize: 0xC0 }
+  - { offsetInCU: 0x8F4, offset: 0x8F4, size: 0x8, addend: 0x0, symName: _generateRandom2DData, symObjAddr: 0x1024, symBinAddr: 0x100002DBC, symSize: 0xDC }
+  - { offsetInCU: 0x970, offset: 0x970, size: 0x8, addend: 0x0, symName: _free2DData, symObjAddr: 0x1100, symBinAddr: 0x100002E98, symSize: 0x70 }
+  - { offsetInCU: 0x9CC, offset: 0x9CC, size: 0x8, addend: 0x0, symName: _generateRandom1DData, symObjAddr: 0x1170, symBinAddr: 0x100002F08, symSize: 0x90 }
+  - { offsetInCU: 0xA1E, offset: 0xA1E, size: 0x8, addend: 0x0, symName: _free1DData, symObjAddr: 0x1200, symBinAddr: 0x100002F98, symSize: 0x24 }
+  - { offsetInCU: 0xA42, offset: 0xA42, size: 0x8, addend: 0x0, symName: _flatten, symObjAddr: 0x1224, symBinAddr: 0x100002FBC, symSize: 0xF0 }
+  - { offsetInCU: 0xACC, offset: 0xACC, size: 0x8, addend: 0x0, symName: _fully_connected, symObjAddr: 0x1314, symBinAddr: 0x1000030AC, symSize: 0xFC }
+  - { offsetInCU: 0xB98, offset: 0xB98, size: 0x8, addend: 0x0, symName: _relu_3d, symObjAddr: 0x1410, symBinAddr: 0x1000031A8, symSize: 0x1C4 }
+  - { offsetInCU: 0xC42, offset: 0xC42, size: 0x8, addend: 0x0, symName: _softmax_vector, symObjAddr: 0x15D4, symBinAddr: 0x10000336C, symSize: 0x160 }
+  - { offsetInCU: 0xCEC, offset: 0xCEC, size: 0x8, addend: 0x0, symName: _relu_vector, symObjAddr: 0x1734, symBinAddr: 0x1000034CC, symSize: 0x78 }
+  - { offsetInCU: 0xD3E, offset: 0xD3E, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x17AC, symBinAddr: 0x100003544, symSize: 0x94C }
+...
