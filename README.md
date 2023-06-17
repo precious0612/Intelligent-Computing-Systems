@@ -21,7 +21,8 @@ In particular, the convolution operation is the most time-consuming operation in
 
 The initial implementation of the convolution operation was quite straightforward. However, it had issues with memory fragmentation which could lead to inefficient memory usage and slow down the execution. 
 
-`double*** convolution1d(double**** filter, double*** input, double* bias, int stride, int padding, int input_dim, int input_depth, int filter_dim, int num_filters) {
+`
+double*** convolution1d(double**** filter, double*** input, double* bias, int stride, int padding, int input_dim, int input_depth, int filter_dim, int num_filters) {
     int output_dim = (input_dim - filter_dim + 2 * padding) / stride + 1; // Calculate output dimensions
 
     // Allocate output array
@@ -48,7 +49,8 @@ The initial implementation of the convolution operation was quite straightforwar
     }
 
     return output;
-}`
+}
+`
 
 ### Avoiding Memory Fragmentation
 
