@@ -8,8 +8,8 @@ The main files in this repository are:
 
 - `Convolution Calculation/test.ipynb`: This is where I initially implemented the convolution operation using numpy.
 - `Convolution Calculation/conv.py or conv_class.py`: After implementing the convolution operation, I used numpy to replicate the VGG19 network for a specific task.
-- `convolution_c.c` and `vgg19_c.c`: When I found that the inference speed of my network was significantly slower than that of networks running on frameworks such as TensorFlow or PyTorch, I decided to use C/C++ to replicate the VGG19 network.
-- `convolution1d_c.c` and `vgg19_1d.c`: These files are part of a project for a school competition where the goal was to implement a 1D convolution in C and then optimize it.
+- `VGG/vgg19.c` and `VGG/vgg.cpp`: When I found that the inference speed of my network was significantly slower than that of networks running on frameworks such as TensorFlow or PyTorch, I decided to use C/C++ to replicate the VGG19 network.
+- `VGG19/*`: These files are part of a project for a school competition where the goal was to implement a 1D convolution in C and then optimize it.
 
 ## Optimization Journey
 
